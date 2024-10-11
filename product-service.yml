@@ -2,7 +2,7 @@ spring:
   application:
     name: Product Service
   datasource:
-    url: jdbc:h2:men:examenT2DB
+    url: jdbc:h2:mem:examenT2DB
     username: sa
     password: 12345
     driver-class-name: org.h2.Driver
