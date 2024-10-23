@@ -10,6 +10,21 @@ spring:
       ddl-auto: create-drop
     properties:
       dialect: org.hibernate.dialect.MySQLDialect5
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 744171173544-ng0m3inasrclkauj7sl6q1cudvh26l6k.apps.googleusercontent.com
+            client-secret: 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
+            scope: profile, email
+            redirect-uri: "{baseUrl}/login/oauth2/code/google"
+            client-name: Google
+        provider:
+          google:
+            authorization-uri: https://accounts.google.com/o/oauth2/auth
+            token-uri: https://oauth2.googleapis.com/token
+            user-info-uri: https://www.googleapis.com/oauth2/v3/userinfo
 
 eureka:
   instance:
